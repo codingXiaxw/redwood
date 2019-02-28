@@ -1,0 +1,21 @@
+#========== Spring settings ===========#
+#======================================#
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://120.79.59.132:29999;Databasename=CCIC_PORTAL_CENTER
+    username: fangzhenghao.qas
+    password: fWLjHJEraGPl9T25wxfO
+    testSql: SELECT 1
+  data:
+    mongodb:
+      uri: mongodb://taishan.user:CTHoaokA6yQVmQ6lPsFF@172.18.92.169:27017/taishan
+  # Redis 连接参数 （RedisProperties）
+  redis:
+    host: 172.18.92.169
+    port: 6379
+    ssl: false
+    database: 3
+    password:
+    timeout: 2000
+
