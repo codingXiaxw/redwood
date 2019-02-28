@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/api/src/main/java/com/redwood/api/config/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -307,7 +307,7 @@
     <property name="project.structure.proportion" value="0.15256496" />
     <property name="project.structure.side.proportion" value="0.29333332" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -354,7 +354,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551325218022</updated>
       <workItem from="1551325219384" duration="7749000" />
-      <workItem from="1551337018202" duration="490000" />
+      <workItem from="1551337018202" duration="901000" />
     </task>
     <task id="LOCAL-00001" summary="init project">
       <created>1551337121354</created>
@@ -367,10 +367,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8239000" />
+    <option name="totallyTimeSpent" value="8650000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -798,7 +799,7 @@
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/redwood/api/config/WebAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
