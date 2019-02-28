@@ -91,15 +91,15 @@
         </dependency>
 
         <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.redwood</groupId>
             <artifactId>core</artifactId>
             <version>1.0.0-beta</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>4.4.1</version>
         </dependency>
     </dependencies>
 

@@ -2,9 +2,9 @@
 #======================================#
 spring:
   datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://120.79.59.132:29999;Databasename=CCIC_PORTAL_CENTER
-    username: fangzhenghao.qas
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://uat.codingxiaxw.cn:3306/redwood_core
+    username: root
     password: fWLjHJEraGPl9T25wxfO
     testSql: SELECT 1
   data:
@@ -12,10 +12,10 @@ spring:
       uri: mongodb://taishan.user:CTHoaokA6yQVmQ6lPsFF@172.18.92.169:27017/taishan
   # Redis 连接参数 （RedisProperties）
   redis:
-    host: 172.18.92.169
+    host: 106.12.28.234
     port: 6379
     ssl: false
     database: 3
-    password:
+    password: laymat@123
     timeout: 2000
 

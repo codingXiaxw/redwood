@@ -14,6 +14,6 @@ public class UserController extends BaseController {
     @RequestMapping("/status" + requestPathPrifex)
     @ResponseBody
     public RedwoodResult LoginStatus() {
-        return SimpleResult.retMessageSuccess("成功", RedisSessionConfig.QuerySession(request));
+        return SimpleResult.retMessageSuccess("看你地巴巴看", RedisSessionConfig.QuerySession(request));
     }
 }

@@ -1,23 +1,13 @@
 package com.redwood.api.controller;
 
-import cn.hutool.crypto.digest.DigestAlgorithm;
-import cn.hutool.crypto.digest.Digester;
 import com.redwood.api.base.BaseController;
 import com.redwood.api.config.RedisSessionConfig;
 import com.redwood.core.common.RedwoodResult;
 import com.redwood.core.common.impl.SimpleResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.session.Session;
-import org.springframework.session.SessionRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/oauth")
@@ -40,6 +30,6 @@ public class OauthController extends BaseController {
     @RequestMapping("/status" + requestPathPrifex)
     @ResponseBody
     public RedwoodResult LoginStatus() {
-        return SimpleResult.retMessageSuccess("成功", RedisSessionConfig.QuerySession(request));
+        return SimpleResult.retMessageSuccess("看你地巴巴看", RedisSessionConfig.QuerySession(request));
     }
 }
