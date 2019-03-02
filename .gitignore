@@ -29,3 +29,5 @@ api/target/classes/application-pro.yml
 api/target/classes/application.yml
 api/target/generated-sources/
 core/target/generated-sources/
+
+.idea/
