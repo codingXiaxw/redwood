@@ -5488,3 +5488,27 @@ Verify the connector's configuration, identify and stop any process that's liste
 2019-03-01 18:26:41.787  WARN 7872 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m33s859ms209µs412ns).
 2019-03-01 18:27:34.422  WARN 7872 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s633ms413µs579ns).
 2019-03-01 18:31:31.382  WARN 7872 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s953ms809µs919ns).
+2019-03-02 13:29:07.756  INFO 6164 --- [main] com.redwood.api.WebApplication           : Starting WebApplication on laymat-family with PID 6164 (started by Administrator in E:\my project git\redwoon)
+2019-03-02 13:29:07.759  INFO 6164 --- [main] com.redwood.api.WebApplication           : The following profiles are active: default
+2019-03-02 13:29:08.656  INFO 6164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-02 13:29:08.659  INFO 6164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-02 13:29:08.689  INFO 6164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-03-02 13:29:09.047  INFO 6164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b035b715] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-02 13:29:09.483  INFO 6164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+2019-03-02 13:29:09.516  INFO 6164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-02 13:29:09.517  INFO 6164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-03-02 13:29:09.526  INFO 6164 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Program Files\Java\jdk-11.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\Program Files\TortoiseSVN\bin;d:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;d:\Program Files (x86)\Fiddler2;d:\Program Files\JetBrains\IntelliJ IDEA 2018.3\bin;;d:\Program Files\JetBrains\WebStorm 183.4588.47\bin;;C:\Program Files (x86)\MyDrivers\DriverGenius;C:\Program Files (x86)\MyDrivers\DriverGenius\ksoft;.]
+2019-03-02 13:29:09.668  INFO 6164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-02 13:29:09.668  INFO 6164 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1868 ms
+2019-03-02 13:29:10.110  INFO 6164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-02 13:29:24.616  INFO 6164 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-02 13:29:24.907  WARN 6164 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.redwood.core.entity.CoreLives.
+2019-03-02 13:29:25.248  INFO 6164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-02 13:29:25.401  INFO 6164 --- [main] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2019-03-02 13:29:25.402  INFO 6164 --- [main] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2019-03-02 13:29:26.941  INFO 6164 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-03-02 13:29:26.964  INFO 6164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+2019-03-02 13:29:26.968  INFO 6164 --- [main] com.redwood.api.WebApplication           : Started WebApplication in 19.665 seconds (JVM running for 21.988)
+2019-03-02 13:30:07.126  INFO 6164 --- [http-nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-02 13:30:07.127  INFO 6164 --- [http-nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-02 13:30:07.135  INFO 6164 --- [http-nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
