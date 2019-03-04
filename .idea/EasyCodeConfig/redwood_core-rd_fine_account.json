@@ -1,0 +1,94 @@
+{
+  "name" : "RdFineAccount",
+  "comment" : "资金表 资金表（财务系统体系）",
+  "fullColumn" : [ {
+    "name" : "accountId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "allMoney",
+    "comment" : "账户总余额",
+    "type" : "java.lang.Object",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "freezeMoney",
+    "comment" : "冻结金额",
+    "type" : "java.lang.Object",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "usableMoney",
+    "comment" : "可用金额",
+    "type" : "java.lang.Object",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "transactionCount",
+    "comment" : "交易次数",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "level",
+    "comment" : "账户等级",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "crUser",
+    "comment" : "创建人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "crTime",
+    "comment" : "创建时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "upUser",
+    "comment" : "修改人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "upTime",
+    "comment" : "修改时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "auditUser",
+    "comment" : "审核人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "auditTime",
+    "comment" : "审核时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.redwood.core",
+  "savePath" : "./core/src/main/java/com/redwood/core",
+  "saveModelName" : "core"
+}

@@ -1,0 +1,213 @@
+{
+  "name" : "RdCoreFloor",
+  "comment" : "房屋表 房屋表（核心系统体系）",
+  "fullColumn" : [ {
+    "name" : "floorId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorBuildingId",
+    "comment" : "所属楼房 楼房编号,building_id",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorLandlordId",
+    "comment" : "所属房东",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorArea",
+    "comment" : "房屋面积",
+    "type" : "java.lang.Object",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorHouseType",
+    "comment" : "房屋户型 一室一厅,两室一厅",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "rentMoney",
+    "comment" : "房屋租金",
+    "type" : "java.lang.Object",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "rentPayType",
+    "comment" : "支付方式 在线支付,现金支付",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "rentPayTime",
+    "comment" : "租金支付时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "pledgeType",
+    "comment" : "押金方式 押一付一，押一付二",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "pledgeMoney",
+    "comment" : "押金金额",
+    "type" : "java.lang.Object",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "leaseType",
+    "comment" : "出租方式 一口价、拍租、面谈",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "leaseTime",
+    "comment" : "出租时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "useingWxId",
+    "comment" : "使用者微信id",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "useingCount",
+    "comment" : "租住人数",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "decorationLevel",
+    "comment" : "房屋装修水平 一般装修、精装修、豪装",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorTips",
+    "comment" : "房屋标签",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorConfigure",
+    "comment" : "房屋家具配置",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorContract",
+    "comment" : "出租合同",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "contractTime",
+    "comment" : "签约时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "contractStTime",
+    "comment" : "合同开始时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "contractEndTime",
+    "comment" : "合同到期时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "indexPageDisplay",
+    "comment" : "是否首页推荐",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "floorUseingType",
+    "comment" : "出租状态 停止出租、等待出租、已出租、即将到期",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "crUser",
+    "comment" : "添加人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "crTime",
+    "comment" : "添加时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "upTime",
+    "comment" : "修改时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "upUser",
+    "comment" : "修改人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "auditUser",
+    "comment" : "审核人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "auditTime",
+    "comment" : "审核时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.redwood.core",
+  "savePath" : "./core/src/main/java/com/redwood/core",
+  "saveModelName" : "core"
+}
