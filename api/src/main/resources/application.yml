@@ -361,6 +361,6 @@ spring:
 logging:
   path: logs/
   level:
-    cmp.core.dao: DEBUG
-    cmp.protal.web: DEBUG
+    com.redwood.api: DEBUG
+    com.redwood.core: DEBUG
     root: INFO

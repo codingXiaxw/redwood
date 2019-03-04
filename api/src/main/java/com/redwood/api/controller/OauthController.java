@@ -1,24 +1,27 @@
 package com.redwood.api.controller;
 
-import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONObject;
 import com.redwood.api.base.BaseController;
 import com.redwood.api.config.RedisSessionConfig;
 import com.redwood.core.common.RedwoodResult;
 import com.redwood.core.common.impl.SimpleResult;
+import com.redwood.core.entity.CoreUser;
+import com.redwood.core.service.CoreUserService;
 import com.redwood.core.utils.AesCbcUtil;
+import com.redwood.core.utils.RDHttpUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 @RequestMapping("/api/v1/oauth")
 public class OauthController extends BaseController {
-    //@Resource
-    //private AdminsService adminsService;
+    @Resource
+    private CoreUserService coreUserService;
 
     private String wxspAppid = "wxc38feb79ab8cfbf2";
     private String wxspSecret = "916137c28b6db8eb6f98e79aa76ae58b";
@@ -44,8 +47,8 @@ public class OauthController extends BaseController {
         String params = "appid=" + wxspAppid + "&secret=" + wxspSecret + "&js_code=" + code + "&grant_type="
                 + grant_type;
         // 发送请求
-        String reqesutUrl = "https://api.weixin.qq.com/sns/jscode2session?" + params;
-        String requestResult = HttpUtil.get(reqesutUrl);
+        String reqesutUrl = "https://api.weixin.qq.com/sns/jscode2session";
+        String requestResult = RDHttpUtil.sendGet(reqesutUrl, params);
         // 解析相应内容（转换成json对象）
         JSONObject json = new JSONObject(requestResult);
         if (json.get("errcode") != null)
@@ -59,24 +62,31 @@ public class OauthController extends BaseController {
         //////////////// 2、对encryptedData加密数据进行AES解密 ////////////////
         String result = AesCbcUtil.decrypt(encryptedData, session_key, iv, "UTF-8");
         if (null != result && result.length() > 0) {
+            JSONObject userInfoJSON = new JSONObject(result);
+            var coreUser = new CoreUser();
+            coreUser.setWx_id(openid);
+            coreUser.setWx_name(userInfoJSON.get("nickName").toString());
+            coreUser.setWx_head_url(userInfoJSON.get("avatarUrl").toString());
             var map = new HashMap<>();
 
-            JSONObject userInfoJSON = new JSONObject(result);
-            Map userInfo = new HashMap();
-            userInfo.put("openId", openid);
-            userInfo.put("nickName", userInfoJSON.get("nickName"));
-            userInfo.put("gender", userInfoJSON.get("gender"));
-            userInfo.put("city", userInfoJSON.get("city"));
-            userInfo.put("province", userInfoJSON.get("province"));
-            userInfo.put("country", userInfoJSON.get("country"));
-            userInfo.put("avatarUrl", userInfoJSON.get("avatarUrl"));
+            //Map userInfo = new HashMap();
+            //userInfo.put("gender", userInfoJSON.get("gender"));
+            //userInfo.put("city", userInfoJSON.get("city"));
+            //userInfo.put("province", userInfoJSON.get("province"));
+            //userInfo.put("country", userInfoJSON.get("country"));
             // 解密unionId & openId;
-            if (!userInfoJSON.isNull("unionId")) {
-                userInfo.put("unionId", userInfoJSON.get("unionId"));
-            }
-            map.put("userInfo", userInfo);
+            //if (!userInfoJSON.isNull("unionId")) {
+                //userInfo.put("unionId", userInfoJSON.get("unionId"));
+            //}
+            //map.put("userInfo", userInfo);
 
-            return SimpleResult.retMessageSuccess("登录成功", map);
+            var saveUserList = new ArrayList<CoreUser>();
+            saveUserList.add(coreUser);
+
+            //保存用户信息
+            coreUserService.saveOrUpdateBatch(saveUserList,0);
+
+            return SimpleResult.retMessageSuccess("登录成功", coreUser);
         } else {
             return SimpleResult.retMessageFail("解密失败");
         }

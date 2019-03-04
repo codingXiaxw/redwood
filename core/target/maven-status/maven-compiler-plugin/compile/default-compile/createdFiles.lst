@@ -43,7 +43,9 @@ com\redwood\core\common\RedwoodResult.class
 com\redwood\core\service\impl\CoreBuildingServiceImpl.class
 com\redwood\core\common\handle\DataSort.class
 com\redwood\core\service\CoreHouseService.class
+com\redwood\core\utils\RDHttpUtil.class
 com\redwood\core\service\CoreLivesService.class
+com\redwood\core\utils\AesCbcUtil.class
 com\redwood\core\entity\AppnRepairs.class
 com\redwood\core\service\CoreBuildingService.class
 com\redwood\core\common\handle\ExportColumn.class

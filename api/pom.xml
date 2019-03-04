@@ -135,6 +135,10 @@
                     <include>static/assets/libs/font-awesome/fonts/**</include>
                 </includes>
             </resource>
+            <!--解决打包丢失配置文件问题-->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
         </resources>
     </build>
 
