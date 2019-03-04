@@ -44,23 +44,39 @@ public class CoreUserServiceImpl implements CoreUserService {
             var userResultList = coreUserDao.selectList(queryWrapper);
 
             if (userResultList.size() == 0) {
-                user.setCrTime((int)DateUtil.currentSeconds());
+                user.setCrTime((int) DateUtil.currentSeconds());
                 user.setCrUser(0);
                 coreUserDao.insert(user);
             } else {
                 var userResult = userResultList.get(0);
                 var update = false;
-                if (!user.getWxName().isEmpty() && !user.getWxName().equals(userResult.getWxName())) {
+                if (!user.getWxName().equals(userResult.getWxName())) {
                     userResult.setWxName(user.getWxName());
                     update = true;
                 }
-                if (!user.getWxHeadUrl().isEmpty() && !user.getWxHeadUrl().equals(userResult.getWxHeadUrl())) {
+                if (!user.getWxHeadUrl().equals(userResult.getWxHeadUrl())) {
                     userResult.setWxHeadUrl(user.getWxHeadUrl());
+                    update = true;
+                }
+                if (!user.getWxProvince().equals(userResult.getWxProvince())) {
+                    userResult.setWxProvince(user.getWxProvince());
+                    update = true;
+                }
+                if (!user.getWxCity().equals(userResult.getWxCity())) {
+                    userResult.setWxCity(user.getWxCity());
+                    update = true;
+                }
+                if (!user.getWxCountry().equals(userResult.getWxCountry())) {
+                    userResult.setWxCountry(user.getWxCountry());
+                    update = true;
+                }
+                if (!user.getWxGender().equals(userResult.getWxGender())) {
+                    userResult.setWxGender(user.getWxGender());
                     update = true;
                 }
 
                 if (update) {
-                    userResult.setUpTime((int)DateUtil.currentSeconds());
+                    userResult.setUpTime((int) DateUtil.currentSeconds());
                     userResult.setUpUser(0);
                 }
                 coreUserDao.updateById(userResult);
@@ -126,7 +142,7 @@ public class CoreUserServiceImpl implements CoreUserService {
 
     @Override
     public CoreUser getOne(Wrapper<CoreUser> wrapper, boolean b) {
-        return null;
+        return coreUserDao.selectOne(wrapper);
     }
 
     @Override

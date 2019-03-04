@@ -4,12 +4,12 @@
 #======================================#
 
 # 产品或项目名称、软件开发公司名称
-productName: csw.portal
-companyName: ccic
+productName: redwood.engie
+companyName: redwood
 
 # 产品版本 版权年份
-productVersion: V0.1
-copyrightYear: 2018
+productVersion: V1.0.0
+copyrightYear: 2019
 
 #是否演示模式
 demoMode: false
@@ -31,7 +31,7 @@ spring:
   
   # 应用程序名称
   application:
-    name: csw.portal
+    name: redwood.engie
     
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:    
@@ -47,18 +47,7 @@ spring:
     username: root
     password: fWLjHJEraGPl9T25wxfO
     testSql: SELECT 1
-#    druid:
-#      stat-view-servlet:
-#        loginUsername: admin
-#        loginPassword: 123456
-#    dynamic:
-#      datasource:
-#          sqlserver:
-#            driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#            url: jdbc:sqlserver://120.79.59.132:29999;Databasename=CWS_PORTAL_DEV
-#            username: cws.portal
-#            password: FArBsJinerSHOCl5F6ZR
-#            testSql: SELECT 1
+
   thymeleaf:
     # 这个是配置模板路径的，默认是templates
     prefix: classpath:/templates/
@@ -82,7 +71,7 @@ spring:
 
   # Redis 连接参数 （RedisProperties）
   redis:
-    host: 106.12.28.234
+    host: uat.codingxiaxw.cn
     port: 6379
     ssl: false
     database: 3

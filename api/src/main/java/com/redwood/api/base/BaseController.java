@@ -1,12 +1,9 @@
 package com.redwood.api.base;
 
-import cn.hutool.extra.servlet.ServletUtil;
-import cn.hutool.json.JSONArray;
-import cn.hutool.json.JSONObject;
-import cn.hutool.json.JSONUtil;
+import cn.hutool.crypto.digest.DigestAlgorithm;
+import cn.hutool.crypto.digest.Digester;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.redwood.api.config.JacksonConfig;
 import com.redwood.api.config.RedisUtil;
 import org.slf4j.Logger;
@@ -16,11 +13,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -29,32 +28,69 @@ import java.util.regex.Pattern;
 public abstract class BaseController {
     protected Logger logger = LoggerFactory.getLogger(getClass());
     protected final static String requestPathPrifex = ".do";
+    protected final long SessionOutTime = 60 * 60 * 6;
 
     @Autowired
     protected HttpServletRequest request;
 
 
     @Autowired
-    JacksonConfig jacksonConfig;
+    protected JacksonConfig jacksonConfig;
 
     @Resource
     protected RedisUtil redisUtil;
 
+    /**
+     * 获取用户真实请求ip地址
+     * @return ip地址
+     */
+    public String getIpAddress() {
+        String ip = request.getHeader("x-forwarded-for");
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_CLIENT_IP");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+        }
+        if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getRemoteAddr();
+        }
+        return ip;
+    }
+
+    /**
+     * 通过请求ip md5加密获取session key
+     * @return session key
+     */
+    protected String getSessionKey(){
+        return new Digester(DigestAlgorithm.MD5).digestHex(getIpAddress());
+    }
+
+
+    protected String getHeaderName(String name){
+       return this.request.getHeader(name);
+    }
 
     protected String getContextPath() {
         return request.getContextPath();
     }
 
 
-    protected Integer getParamInt(String key){
+    protected Integer getParamInt(String key) {
         var value = this.request.getParameter(key);
-        if(value.isEmpty())
+        if (value.isEmpty())
             return 0;
 
         return Integer.parseInt(this.request.getParameter(key));
     }
 
-    protected String getParamStr(String key){
+    protected String getParamStr(String key) {
         return this.request.getParameter(key);
     }
 
@@ -108,11 +144,11 @@ public abstract class BaseController {
 
             //var queryFields = queryBean.getClass().getFields();
 
-            List<Field> fieldList = new ArrayList() ;
+            List<Field> fieldList = new ArrayList();
             Class tempClass = queryBean.getClass();
             //当父类为null的时候说明到达了最上层的父类(Object类).
             while (tempClass != null) {
-                fieldList.addAll(Arrays.asList(tempClass .getDeclaredFields()));
+                fieldList.addAll(Arrays.asList(tempClass.getDeclaredFields()));
                 //得到父类,然后赋给自己
                 tempClass = tempClass.getSuperclass();
             }
@@ -124,7 +160,7 @@ public abstract class BaseController {
                 if (val != null && val != "" && !checkFieldJump(name))
                     wrapper.like(name, val);
             }
-            wrapper.eq("1","1");
+            wrapper.eq("1", "1");
 
             var search = this.getParamStr("search");
 
@@ -145,6 +181,7 @@ public abstract class BaseController {
 
     /**
      * 将请求字符串转换为指定对象
+     *
      * @param param
      * @param beanClass
      * @param <T>
@@ -164,6 +201,7 @@ public abstract class BaseController {
 
     /**
      * 发送文件响应流
+     *
      * @param response
      * @param fileName
      */

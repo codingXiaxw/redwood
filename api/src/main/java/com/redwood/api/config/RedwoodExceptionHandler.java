@@ -1,6 +1,5 @@
 package com.redwood.api.config;
 
-import cn.hutool.json.JSONUtil;
 import com.redwood.core.common.impl.SimpleResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * 定义未处理异常统一拦截
  */
 @ControllerAdvice
-public class EcsExceptionHandler {
+public class RedwoodExceptionHandler {
 
     static final String TO_URL = "/error";
 
@@ -21,7 +20,7 @@ public class EcsExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     public Object handle(HttpServletRequest request, HttpServletResponse response, Exception e) throws Exception {
         e.printStackTrace();
-        return SimpleResult.retMessageFail(JSONUtil.toJsonStr(e));
+        return SimpleResult.retSystemFail(e.getMessage());
     }
 
 

@@ -1,8 +1,10 @@
 package com.redwood.api.controller;
 
 import cn.hutool.json.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.redwood.api.base.BaseController;
 import com.redwood.api.config.RedisSessionConfig;
+import com.redwood.core.common.RedwoodException;
 import com.redwood.core.common.RedwoodResult;
 import com.redwood.core.common.impl.SimpleResult;
 import com.redwood.core.entity.CoreUser;
@@ -15,13 +17,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 @Controller
 @RequestMapping("/api/v1/oauth")
 public class OauthController extends BaseController {
     @Resource
     private CoreUserService coreUserService;
+    @Resource
+    private RedisSessionConfig redisSessionConfig;
 
     private String wxspAppid = "wxc38feb79ab8cfbf2";
     private String wxspSecret = "916137c28b6db8eb6f98e79aa76ae58b";
@@ -67,35 +70,44 @@ public class OauthController extends BaseController {
             coreUser.setWxId(openid);
             coreUser.setWxName(userInfoJSON.get("nickName").toString());
             coreUser.setWxHeadUrl(userInfoJSON.get("avatarUrl").toString());
-            var map = new HashMap<>();
+            coreUser.setWxProvince(userInfoJSON.get("province").toString());
+            coreUser.setWxCity(userInfoJSON.get("city").toString());
+            coreUser.setWxCountry(userInfoJSON.get("country").toString());
+            coreUser.setWxGender(Integer.parseInt(userInfoJSON.get("gender").toString()));
 
-            //Map userInfo = new HashMap();
-            //userInfo.put("gender", userInfoJSON.get("gender"));
-            //userInfo.put("city", userInfoJSON.get("city"));
-            //userInfo.put("province", userInfoJSON.get("province"));
-            //userInfo.put("country", userInfoJSON.get("country"));
-            // 解密unionId & openId;
-            //if (!userInfoJSON.isNull("unionId")) {
-                //userInfo.put("unionId", userInfoJSON.get("unionId"));
-            //}
-            //map.put("userInfo", userInfo);
+            // 解密unionId
+            if (!userInfoJSON.isNull("unionId")) {
+                coreUser.setWxUnionId(userInfoJSON.get("unionId").toString());
+            }
 
             var saveUserList = new ArrayList<CoreUser>();
             saveUserList.add(coreUser);
 
             //保存用户信息
-            coreUserService.saveOrUpdateBatch(saveUserList,0);
+            coreUserService.saveOrUpdateBatch(saveUserList, 0);
+            var userResult = coreUserService.getOne(new QueryWrapper<CoreUser>().eq("wx_id", coreUser.getWxId()));
+            if (userResult == null)
+                throw new RedwoodException("系统异常，登录失败");
 
-            return SimpleResult.retMessageSuccess("登录成功", coreUser);
+            //设置用户登录状态
+            var token = redisSessionConfig.SaveSession(userResult);
+            if (token == null)
+                throw new RedwoodException("系统异常，登录失败");
+
+            return SimpleResult.retMessageSuccess("登录成功", token);
         } else {
             return SimpleResult.retMessageFail("解密失败");
         }
     }
 
 
-    @RequestMapping("/status" + requestPathPrifex)
+    @RequestMapping("/user_status")
     @ResponseBody
     public RedwoodResult LoginStatus() {
-        return SimpleResult.retMessageSuccess("看你地巴巴看", RedisSessionConfig.QuerySession(request));
+        var session = redisSessionConfig.QuerySession();
+        if (session == null)
+            return SimpleResult.retNeedLogin;
+
+        return SimpleResult.retMessageSuccess("已登录", session);
     }
 }

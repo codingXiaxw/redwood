@@ -9,6 +9,13 @@
     "custom" : false,
     "ext" : { }
   }, {
+    "name" : "accountId",
+    "comment" : "账户id",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
     "name" : "wxId",
     "comment" : "微信id",
     "type" : "java.lang.String",
@@ -30,6 +37,41 @@
     "custom" : false,
     "ext" : { }
   }, {
+    "name" : "wxGender",
+    "comment" : "用户性别",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "wxProvince",
+    "comment" : "微信国家",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "wxCity",
+    "comment" : "微信城市",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "wxCountry",
+    "comment" : "微信区域",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "wxUnionId",
+    "comment" : "微信unionId",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
     "name" : "userName",
     "comment" : "用户姓名",
     "type" : "java.lang.String",
@@ -44,36 +86,50 @@
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userCurrentFloor",
+    "name" : "currentHouseId",
     "comment" : "用户当前居住房屋",
-    "type" : "java.lang.String",
+    "type" : "java.lang.Double",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userCurrentOccupation",
+    "name" : "currentOccupation",
     "comment" : "用户当前职业",
     "type" : null,
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userLiveAddress",
+    "name" : "liveAddress",
     "comment" : "用户当前登记地址",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userIdcardAddress",
+    "name" : "idcardAddress",
     "comment" : "用户身份证登记地址",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userIdcardNumber",
+    "name" : "idcardNumber",
     "comment" : "用户身份证号码",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "idcardImageA",
+    "comment" : "身份证正面",
+    "type" : "java.lang.String",
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "idcardImageB",
+    "comment" : "身份证反面",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
@@ -86,44 +142,37 @@
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userHighSchool",
+    "name" : "highSchool",
     "comment" : "用户最高学历",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userSchoolName",
+    "name" : "schoolName",
     "comment" : "用户毕业学校",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userCompanyName",
+    "name" : "companyName",
     "comment" : "用户工作单位",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userCompanyAddress",
+    "name" : "companyAddress",
     "comment" : "用户工作单位地址",
     "type" : "java.lang.String",
     "shortType" : null,
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "userIdcardImageA",
-    "comment" : "身份证正面",
-    "type" : "java.lang.String",
-    "shortType" : null,
-    "custom" : false,
-    "ext" : { }
-  }, {
-    "name" : "userIdcardImageB",
-    "comment" : "身份证反面",
-    "type" : "java.lang.String",
+    "name" : "crUser",
+    "comment" : "创建人",
+    "type" : null,
     "shortType" : null,
     "custom" : false,
     "ext" : { }
@@ -135,8 +184,29 @@
     "custom" : false,
     "ext" : { }
   }, {
+    "name" : "upUser",
+    "comment" : "更新人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
     "name" : "upTime",
     "comment" : "更新时间",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "auditUser",
+    "comment" : "审核人",
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "auditTime",
+    "comment" : "审核时间",
     "type" : null,
     "shortType" : null,
     "custom" : false,

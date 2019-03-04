@@ -13,13 +13,13 @@ import java.io.Serializable;
  * 用户表 用户表（核心系统体系）(RdCoreUser)实体类
  *
  * @author laymat
- * @since 2019-03-04 14:52:23
+ * @since 2019-03-04 15:10:29
  */
 @Data
 @TableName("rd_core_user")
 public class CoreUser implements Serializable {
 
-    private static final long serialVersionUID = -22488560010688009L;
+    private static final long serialVersionUID = 634748743865745255L;
     //编号    
     @TableId(type = IdType.AUTO,value = "user_id")
     private Integer userId;
@@ -35,6 +35,21 @@ public class CoreUser implements Serializable {
     //微信头像    
     @TableField("wx_head_url")
     private String wxHeadUrl;
+    //用户性别    
+    @TableField("wx_gender")
+    private Integer wxGender;
+    //微信国家    
+    @TableField("wx_province")
+    private String wxProvince;
+    //微信城市    
+    @TableField("wx_city")
+    private String wxCity;
+    //微信区域    
+    @TableField("wx_country")
+    private String wxCountry;
+    //微信unionId    
+    @TableField("wx_union_id")
+    private String wxUnionId;
     //用户姓名    
     @TableField("user_name")
     private String userName;

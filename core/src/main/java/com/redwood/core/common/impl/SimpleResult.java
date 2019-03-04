@@ -15,7 +15,12 @@ public class SimpleResult<T> extends RedwoodResult {
      * request fail result
      */
     public static final RedwoodResult retFail = new SimpleResult(-1, "fail", null);
-    public static final RedwoodResult retNeedLogin = new SimpleResult(-10, "need login", null);
+    public static final RedwoodResult retNeedLogin = new SimpleResult(-10, "未经授权的访问", null);
+
+    /**
+     * request success result
+     */
+    public static final RedwoodResult retSuccess = new SimpleResult(0, "success", true);
 
     /**
      * request fail result as custom message
@@ -27,10 +32,9 @@ public class SimpleResult<T> extends RedwoodResult {
         return new SimpleResult(-1, message, null);
     }
 
-    /**
-     * request success result
-     */
-    public static final RedwoodResult retSuccess = new SimpleResult(0, "success", true);
+    public static final RedwoodResult retSystemFail(String message) {
+        return new SimpleResult(-99, message, null);
+    }
 
     /**
      * request success result as custom message and data

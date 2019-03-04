@@ -930,22 +930,25 @@
     <table id="234" parent="5" name="rd_core_user">
       <Comment>用户表 用户表（核心系统体系）</Comment>
     </table>
-    <table id="235" parent="5" name="rd_fine_account">
+    <table id="235" parent="5" name="rd_core_user_63202">
+      <Comment>用户表 用户表（核心系统体系）</Comment>
+    </table>
+    <table id="236" parent="5" name="rd_fine_account">
       <Comment>资金表 资金表（财务系统体系）</Comment>
     </table>
-    <table id="236" parent="5" name="rd_fine_balance">
+    <table id="237" parent="5" name="rd_fine_balance">
       <Comment>结算表 结算表（财务系统体系）</Comment>
     </table>
-    <table id="237" parent="5" name="rd_prod_auction">
+    <table id="238" parent="5" name="rd_prod_auction">
       <Comment>房屋拍租表 拍租表（产品体系）</Comment>
     </table>
-    <table id="238" parent="5" name="rd_prod_order">
+    <table id="239" parent="5" name="rd_prod_order">
       <Comment>用户订单表 订单表（产品体系）</Comment>
     </table>
-    <table id="239" parent="5" name="rd_prod_tranaction">
+    <table id="240" parent="5" name="rd_prod_tranaction">
       <Comment>交易流水表</Comment>
     </table>
-    <column id="240" parent="229" name="id">
+    <column id="241" parent="229" name="id">
       <Position>1</Position>
       <Comment>编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -953,123 +956,123 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="229" name="repair_id">
+    <column id="242" parent="229" name="repair_id">
       <Position>2</Position>
       <Comment>维修单id</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="229" name="building_id">
+    <column id="243" parent="229" name="building_id">
       <Position>3</Position>
       <Comment>所属楼房id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="229" name="landlord_id">
+    <column id="244" parent="229" name="landlord_id">
       <Position>4</Position>
       <Comment>所属房东id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="229" name="repair_type">
+    <column id="245" parent="229" name="repair_type">
       <Position>5</Position>
       <Comment>维修类型 空调维修、水电维修</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="229" name="repair_describe">
+    <column id="246" parent="229" name="repair_describe">
       <Position>6</Position>
       <Comment>维修描述</Comment>
       <DataType>varchar(4000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="229" name="repair_expect_time">
+    <column id="247" parent="229" name="repair_expect_time">
       <Position>7</Position>
       <Comment>期望维修时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="229" name="pay_type">
+    <column id="248" parent="229" name="pay_type">
       <Position>8</Position>
       <Comment>支付方式 线上支付、线下支付</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="229" name="order_id">
+    <column id="249" parent="229" name="order_id">
       <Position>9</Position>
       <Comment>订单编号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="229" name="house_id">
+    <column id="250" parent="229" name="house_id">
       <Position>10</Position>
       <Comment>所属房屋id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="229" name="finsh_time">
+    <column id="251" parent="229" name="finsh_time">
       <Position>11</Position>
       <Comment>维修完成时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="229" name="repair_state">
+    <column id="252" parent="229" name="repair_state">
       <Position>12</Position>
       <Comment>维修单状态 等待接单、已接单、已完成</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="229" name="cr_user">
+    <column id="253" parent="229" name="cr_user">
       <Position>13</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="229" name="cr_time">
+    <column id="254" parent="229" name="cr_time">
       <Position>14</Position>
       <Comment>创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="229" name="up_user">
+    <column id="255" parent="229" name="up_user">
       <Position>15</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="229" name="up_time">
+    <column id="256" parent="229" name="up_time">
       <Position>16</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="229" name="audit_user">
+    <column id="257" parent="229" name="audit_user">
       <Position>17</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="229" name="audit_time">
+    <column id="258" parent="229" name="audit_time">
       <Position>18</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="258" parent="229" name="IDU_rd_appnirs_repair_id532F">
+    <index id="259" parent="229" name="IDU_rd_appnirs_repair_id532F">
       <ColNames>repair_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="259" parent="229" name="PRIMARY">
+    <key id="260" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="260" parent="229" name="IDU_rd_appnirs_repair_id532F">
+    <key id="261" parent="229" name="IDU_rd_appnirs_repair_id532F">
       <ColNames>repair_id</ColNames>
       <UnderlyingIndexName>IDU_rd_appnirs_repair_id532F</UnderlyingIndexName>
     </key>
-    <column id="261" parent="230" name="building_id">
+    <column id="262" parent="230" name="building_id">
       <Position>1</Position>
       <Comment>楼房编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1077,132 +1080,132 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="230" name="building_name">
+    <column id="263" parent="230" name="building_name">
       <Position>2</Position>
       <Comment>楼房名称</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="230" name="current_region">
+    <column id="264" parent="230" name="current_region">
       <Position>3</Position>
       <Comment>楼房所属区域 宝安福永、宝安沙井、宝安西乡、宝安松岗</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="230" name="current_region_gps">
+    <column id="265" parent="230" name="current_region_gps">
       <Position>4</Position>
       <Comment>楼房gps地理数据</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="230" name="current_region_address">
+    <column id="266" parent="230" name="current_region_address">
       <Position>5</Position>
       <Comment>楼房具体地址</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="230" name="join_from">
+    <column id="267" parent="230" name="join_from">
       <Position>6</Position>
       <Comment>楼房来源（所属村） 石龙头旧村、盐田村</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="230" name="add_from">
+    <column id="268" parent="230" name="add_from">
       <Position>7</Position>
       <Comment>楼房添加来源</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="230" name="landlord_id">
+    <column id="269" parent="230" name="landlord_id">
       <Position>8</Position>
       <Comment>所属房东</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="230" name="scan_number">
+    <column id="270" parent="230" name="scan_number">
       <Position>9</Position>
       <Comment>楼房二维码被扫次数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="230" name="up_number">
+    <column id="271" parent="230" name="up_number">
       <Position>10</Position>
       <Comment>楼房点赞次数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="230" name="step_number">
+    <column id="272" parent="230" name="step_number">
       <Position>11</Position>
       <Comment>楼房被踩次数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="230" name="index_page_display">
+    <column id="273" parent="230" name="index_page_display">
       <Position>12</Position>
       <Comment>是否首页推荐</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="230" name="page_hide">
+    <column id="274" parent="230" name="page_hide">
       <Position>13</Position>
       <Comment>是否隐藏推荐</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="230" name="cr_user">
+    <column id="275" parent="230" name="cr_user">
       <Position>14</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="230" name="cr_time">
+    <column id="276" parent="230" name="cr_time">
       <Position>15</Position>
       <Comment>房屋添加时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="230" name="up_user">
+    <column id="277" parent="230" name="up_user">
       <Position>16</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="230" name="up_time">
+    <column id="278" parent="230" name="up_time">
       <Position>17</Position>
       <Comment>更新时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="230" name="audit_user">
+    <column id="279" parent="230" name="audit_user">
       <Position>18</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="230" name="audit_time">
+    <column id="280" parent="230" name="audit_time">
       <Position>19</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="230" name="audit_state">
+    <column id="281" parent="230" name="audit_state">
       <Position>20</Position>
       <Comment>楼房审核状态 新提交,等待审核,审核通过</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="281" parent="230" name="building_state">
+    <column id="282" parent="230" name="building_state">
       <Position>21</Position>
       <Comment>房屋系统状态 等待上线,已上线,已下线</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="282" parent="230" name="PRIMARY">
+    <key id="283" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>building_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="283" parent="231" name="house_id">
+    <column id="284" parent="231" name="house_id">
       <Position>1</Position>
       <Comment>房屋编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1210,186 +1213,186 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="231" name="building_id">
+    <column id="285" parent="231" name="building_id">
       <Position>2</Position>
       <Comment>所属楼房 楼房编号,building_id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="231" name="landlord_id">
+    <column id="286" parent="231" name="landlord_id">
       <Position>3</Position>
       <Comment>所属房东</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="231" name="house_area">
+    <column id="287" parent="231" name="house_area">
       <Position>4</Position>
       <Comment>房屋面积</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="231" name="house_type">
+    <column id="288" parent="231" name="house_type">
       <Position>5</Position>
       <Comment>房屋户型 一室一厅,两室一厅</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="231" name="rent_money">
+    <column id="289" parent="231" name="rent_money">
       <Position>6</Position>
       <Comment>房屋租金</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="231" name="rent_pay_type">
+    <column id="290" parent="231" name="rent_pay_type">
       <Position>7</Position>
       <Comment>支付方式 在线支付,现金支付</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="231" name="rent_pay_time">
+    <column id="291" parent="231" name="rent_pay_time">
       <Position>8</Position>
       <Comment>租金支付时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="231" name="pledge_type">
+    <column id="292" parent="231" name="pledge_type">
       <Position>9</Position>
       <Comment>押金方式 押一付一，押一付二</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="231" name="pledge_money">
+    <column id="293" parent="231" name="pledge_money">
       <Position>10</Position>
       <Comment>押金金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="231" name="lease_type">
+    <column id="294" parent="231" name="lease_type">
       <Position>11</Position>
       <Comment>出租方式 一口价、拍租、面谈</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="231" name="lease_time">
+    <column id="295" parent="231" name="lease_time">
       <Position>12</Position>
       <Comment>出租时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="231" name="useing_wx_id">
+    <column id="296" parent="231" name="useing_wx_id">
       <Position>13</Position>
       <Comment>使用者微信id</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="231" name="useing_count">
+    <column id="297" parent="231" name="useing_count">
       <Position>14</Position>
       <Comment>租住人数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="231" name="decoration_level">
+    <column id="298" parent="231" name="decoration_level">
       <Position>15</Position>
       <Comment>房屋装修水平 一般装修、精装修、豪装</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="231" name="house_tips">
+    <column id="299" parent="231" name="house_tips">
       <Position>16</Position>
       <Comment>房屋标签</Comment>
       <DataType>varchar(500)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="231" name="house_furniture_configure">
+    <column id="300" parent="231" name="house_furniture_configure">
       <Position>17</Position>
       <Comment>房屋家具配置</Comment>
       <DataType>varchar(500)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="231" name="contract">
+    <column id="301" parent="231" name="contract">
       <Position>18</Position>
       <Comment>出租合同</Comment>
       <DataType>varchar(500)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="231" name="contract_time">
+    <column id="302" parent="231" name="contract_time">
       <Position>19</Position>
       <Comment>签约时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="231" name="contract_st_time">
+    <column id="303" parent="231" name="contract_st_time">
       <Position>20</Position>
       <Comment>合同开始时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="231" name="contract_end_time">
+    <column id="304" parent="231" name="contract_end_time">
       <Position>21</Position>
       <Comment>合同到期时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="231" name="index_page_display">
+    <column id="305" parent="231" name="index_page_display">
       <Position>22</Position>
       <Comment>是否首页推荐</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="231" name="useing_type">
+    <column id="306" parent="231" name="useing_type">
       <Position>23</Position>
       <Comment>出租状态 停止出租、等待出租、已出租、即将到期</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="231" name="cr_user">
+    <column id="307" parent="231" name="cr_user">
       <Position>24</Position>
       <Comment>添加人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="231" name="cr_time">
+    <column id="308" parent="231" name="cr_time">
       <Position>25</Position>
       <Comment>添加时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="231" name="up_time">
+    <column id="309" parent="231" name="up_time">
       <Position>26</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="231" name="up_user">
+    <column id="310" parent="231" name="up_user">
       <Position>27</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="231" name="audit_user">
+    <column id="311" parent="231" name="audit_user">
       <Position>28</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="231" name="audit_time">
+    <column id="312" parent="231" name="audit_time">
       <Position>29</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="231" name="audit_state">
+    <column id="313" parent="231" name="audit_state">
       <Position>30</Position>
       <Comment>审核状态</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="313" parent="231" name="PRIMARY">
+    <key id="314" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>house_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="314" parent="232" name="landlord_id">
+    <column id="315" parent="232" name="landlord_id">
       <Position>1</Position>
       <Comment>编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1397,120 +1400,120 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="232" name="account_id">
+    <column id="316" parent="232" name="account_id">
       <Position>2</Position>
       <Comment>账户id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="232" name="wx_id">
+    <column id="317" parent="232" name="wx_id">
       <Position>3</Position>
       <Comment>微信id</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="232" name="wx_name">
+    <column id="318" parent="232" name="wx_name">
       <Position>4</Position>
       <Comment>微信名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="232" name="wx_head_url">
+    <column id="319" parent="232" name="wx_head_url">
       <Position>5</Position>
       <Comment>微信头像</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="232" name="landlord_name">
+    <column id="320" parent="232" name="landlord_name">
       <Position>6</Position>
       <Comment>房东姓名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="232" name="landlord_phone">
+    <column id="321" parent="232" name="landlord_phone">
       <Position>7</Position>
       <Comment>房东手机</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="232" name="landlord_idcard_a">
+    <column id="322" parent="232" name="landlord_idcard_a">
       <Position>8</Position>
       <Comment>房东身份证正面</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="232" name="landlord_idcard_b">
+    <column id="323" parent="232" name="landlord_idcard_b">
       <Position>9</Position>
       <Comment>房东身份证反面</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="232" name="account_money">
+    <column id="324" parent="232" name="account_money">
       <Position>10</Position>
       <Comment>账户余额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="232" name="freeze_money">
+    <column id="325" parent="232" name="freeze_money">
       <Position>11</Position>
       <Comment>冻结金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="232" name="cr_user">
+    <column id="326" parent="232" name="cr_user">
       <Position>12</Position>
       <Comment>添加人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="232" name="cr_time">
+    <column id="327" parent="232" name="cr_time">
       <Position>13</Position>
       <Comment>添加时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="232" name="up_user">
+    <column id="328" parent="232" name="up_user">
       <Position>14</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="232" name="up_time">
+    <column id="329" parent="232" name="up_time">
       <Position>15</Position>
       <Comment>更新时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="232" name="audit_user">
+    <column id="330" parent="232" name="audit_user">
       <Position>16</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="232" name="audit_time">
+    <column id="331" parent="232" name="audit_time">
       <Position>17</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="232" name="audit_state">
+    <column id="332" parent="232" name="audit_state">
       <Position>18</Position>
       <Comment>房东审核状态 等待审核、审核中、已通过</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="232" name="landlord_state">
+    <column id="333" parent="232" name="landlord_state">
       <Position>19</Position>
       <Comment>房东状态 已暂停、正常、已销户</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="333" parent="232" name="PRIMARY">
+    <key id="334" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>landlord_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="334" parent="233" name="live_id">
+    <column id="335" parent="233" name="live_id">
       <Position>1</Position>
       <Comment>入住编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1518,90 +1521,90 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="233" name="house_id">
+    <column id="336" parent="233" name="house_id">
       <Position>2</Position>
       <Comment>所属房屋id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="233" name="landlord_id">
+    <column id="337" parent="233" name="landlord_id">
       <Position>3</Position>
       <Comment>所属房东id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="233" name="user_id">
+    <column id="338" parent="233" name="user_id">
       <Position>4</Position>
       <Comment>入住用户</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="233" name="live_time">
+    <column id="339" parent="233" name="live_time">
       <Position>5</Position>
       <Comment>入住时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="233" name="live_number">
+    <column id="340" parent="233" name="live_number">
       <Position>6</Position>
       <Comment>入住人数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="233" name="live_state">
+    <column id="341" parent="233" name="live_state">
       <Position>7</Position>
       <Comment>入住状态 等待入住、已入住、已退房</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="233" name="cr_user">
+    <column id="342" parent="233" name="cr_user">
       <Position>8</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="233" name="cr_time">
+    <column id="343" parent="233" name="cr_time">
       <Position>9</Position>
       <Comment>创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="233" name="up_time">
+    <column id="344" parent="233" name="up_time">
       <Position>10</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="233" name="up_user">
+    <column id="345" parent="233" name="up_user">
       <Position>11</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="233" name="audit_user">
+    <column id="346" parent="233" name="audit_user">
       <Position>12</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="233" name="audit_time">
+    <column id="347" parent="233" name="audit_time">
       <Position>13</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="233" name="audit_state">
+    <column id="348" parent="233" name="audit_state">
       <Position>14</Position>
       <Comment>审核状态</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="348" parent="233" name="PRIMARY">
+    <key id="349" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>live_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="349" parent="234" name="user_id">
+    <column id="350" parent="234" name="user_id">
       <Position>1</Position>
       <Comment>编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1609,165 +1612,361 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="234" name="account_id">
+    <column id="351" parent="234" name="account_id">
       <Position>2</Position>
       <Comment>账户id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="234" name="wx_id">
+    <column id="352" parent="234" name="wx_id">
       <Position>3</Position>
       <Comment>微信id</Comment>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="352" parent="234" name="wx_name">
+    <column id="353" parent="234" name="wx_name">
       <Position>4</Position>
       <Comment>微信名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="234" name="wx_head_url">
+    <column id="354" parent="234" name="wx_head_url">
       <Position>5</Position>
       <Comment>微信头像</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="354" parent="234" name="user_name">
+    <column id="355" parent="234" name="wx_gender">
+      <Position>6</Position>
+      <Comment>用户性别</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="356" parent="234" name="wx_province">
+      <Position>7</Position>
+      <Comment>微信国家</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="357" parent="234" name="wx_city">
+      <Position>8</Position>
+      <Comment>微信城市</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="358" parent="234" name="wx_country">
+      <Position>9</Position>
+      <Comment>微信区域</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="234" name="wx_union_id">
+      <Position>10</Position>
+      <Comment>微信unionId</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="234" name="user_name">
+      <Position>11</Position>
+      <Comment>用户姓名</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="361" parent="234" name="user_phone">
+      <Position>12</Position>
+      <Comment>用户手机</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="362" parent="234" name="current_house_id">
+      <Position>13</Position>
+      <Comment>用户当前居住房屋</Comment>
+      <DataType>decimal(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="234" name="current_occupation">
+      <Position>14</Position>
+      <Comment>用户当前职业</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="364" parent="234" name="live_address">
+      <Position>15</Position>
+      <Comment>用户当前登记地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="365" parent="234" name="idcard_address">
+      <Position>16</Position>
+      <Comment>用户身份证登记地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="366" parent="234" name="idcard_number">
+      <Position>17</Position>
+      <Comment>用户身份证号码</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="367" parent="234" name="idcard_image_a">
+      <Position>18</Position>
+      <Comment>身份证正面</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="368" parent="234" name="idcard_image_b">
+      <Position>19</Position>
+      <Comment>身份证反面</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="369" parent="234" name="user_idcard_certified">
+      <Position>20</Position>
+      <Comment>用户身份证认证状态</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="234" name="high_school">
+      <Position>21</Position>
+      <Comment>用户最高学历</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="371" parent="234" name="school_name">
+      <Position>22</Position>
+      <Comment>用户毕业学校</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="372" parent="234" name="company_name">
+      <Position>23</Position>
+      <Comment>用户工作单位</Comment>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="373" parent="234" name="company_address">
+      <Position>24</Position>
+      <Comment>用户工作单位地址</Comment>
+      <DataType>varchar(200)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="374" parent="234" name="cr_user">
+      <Position>25</Position>
+      <Comment>创建人</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="375" parent="234" name="cr_time">
+      <Position>26</Position>
+      <Comment>添加时间</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="376" parent="234" name="up_user">
+      <Position>27</Position>
+      <Comment>更新人</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="377" parent="234" name="up_time">
+      <Position>28</Position>
+      <Comment>更新时间</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="378" parent="234" name="audit_user">
+      <Position>29</Position>
+      <Comment>审核人</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="379" parent="234" name="audit_time">
+      <Position>30</Position>
+      <Comment>审核时间</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="380" parent="234" name="user_state">
+      <Position>31</Position>
+      <Comment>用户状态 已暂停、使用中</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="381" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="382" parent="235" name="user_id">
+      <Position>1</Position>
+      <Comment>编号</Comment>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="383" parent="235" name="account_id">
+      <Position>2</Position>
+      <Comment>账户id</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="384" parent="235" name="wx_id">
+      <Position>3</Position>
+      <Comment>微信id</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="385" parent="235" name="wx_name">
+      <Position>4</Position>
+      <Comment>微信名</Comment>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="386" parent="235" name="wx_head_url">
+      <Position>5</Position>
+      <Comment>微信头像</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="387" parent="235" name="user_name">
       <Position>6</Position>
       <Comment>用户姓名</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="355" parent="234" name="user_phone">
+    <column id="388" parent="235" name="user_phone">
       <Position>7</Position>
       <Comment>用户手机</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="356" parent="234" name="current_house_id">
+    <column id="389" parent="235" name="current_house_id">
       <Position>8</Position>
       <Comment>用户当前居住房屋</Comment>
       <DataType>decimal(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="357" parent="234" name="current_occupation">
+    <column id="390" parent="235" name="current_occupation">
       <Position>9</Position>
       <Comment>用户当前职业</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="234" name="live_address">
+    <column id="391" parent="235" name="live_address">
       <Position>10</Position>
       <Comment>用户当前登记地址</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="234" name="idcard_address">
+    <column id="392" parent="235" name="idcard_address">
       <Position>11</Position>
       <Comment>用户身份证登记地址</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="234" name="idcard_number">
+    <column id="393" parent="235" name="idcard_number">
       <Position>12</Position>
       <Comment>用户身份证号码</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="234" name="idcard_image_a">
+    <column id="394" parent="235" name="idcard_image_a">
       <Position>13</Position>
       <Comment>身份证正面</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="234" name="idcard_image_b">
+    <column id="395" parent="235" name="idcard_image_b">
       <Position>14</Position>
       <Comment>身份证反面</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="234" name="user_idcard_certified">
+    <column id="396" parent="235" name="user_idcard_certified">
       <Position>15</Position>
       <Comment>用户身份证认证状态</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="234" name="high_school">
+    <column id="397" parent="235" name="high_school">
       <Position>16</Position>
       <Comment>用户最高学历</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="234" name="school_name">
+    <column id="398" parent="235" name="school_name">
       <Position>17</Position>
       <Comment>用户毕业学校</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="234" name="company_name">
+    <column id="399" parent="235" name="company_name">
       <Position>18</Position>
       <Comment>用户工作单位</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="234" name="company_address">
+    <column id="400" parent="235" name="company_address">
       <Position>19</Position>
       <Comment>用户工作单位地址</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="234" name="cr_user">
+    <column id="401" parent="235" name="cr_user">
       <Position>20</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="234" name="cr_time">
+    <column id="402" parent="235" name="cr_time">
       <Position>21</Position>
       <Comment>添加时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="234" name="up_user">
+    <column id="403" parent="235" name="up_user">
       <Position>22</Position>
       <Comment>更新人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="234" name="up_time">
+    <column id="404" parent="235" name="up_time">
       <Position>23</Position>
       <Comment>更新时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="234" name="audit_user">
+    <column id="405" parent="235" name="audit_user">
       <Position>24</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="373" parent="234" name="audit_time">
+    <column id="406" parent="235" name="audit_time">
       <Position>25</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="234" name="user_state">
+    <column id="407" parent="235" name="user_state">
       <Position>26</Position>
       <Comment>用户状态 已暂停、使用中</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="375" parent="234" name="PRIMARY">
+    <key id="408" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="376" parent="235" name="account_id">
+    <column id="409" parent="236" name="account_id">
       <Position>1</Position>
       <Comment>账户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1775,225 +1974,225 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="377" parent="235" name="all_money">
+    <column id="410" parent="236" name="all_money">
       <Position>2</Position>
       <Comment>账户总余额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="378" parent="235" name="freeze_money">
+    <column id="411" parent="236" name="freeze_money">
       <Position>3</Position>
       <Comment>冻结金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="379" parent="235" name="usable_money">
+    <column id="412" parent="236" name="usable_money">
       <Position>4</Position>
       <Comment>可用金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="380" parent="235" name="transaction_count">
+    <column id="413" parent="236" name="transaction_count">
       <Position>5</Position>
       <Comment>交易次数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="381" parent="235" name="level">
+    <column id="414" parent="236" name="level">
       <Position>6</Position>
       <Comment>账户等级</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="382" parent="235" name="cr_user">
+    <column id="415" parent="236" name="cr_user">
       <Position>7</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="383" parent="235" name="cr_time">
+    <column id="416" parent="236" name="cr_time">
       <Position>8</Position>
       <Comment>创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="235" name="up_user">
+    <column id="417" parent="236" name="up_user">
       <Position>9</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="385" parent="235" name="up_time">
+    <column id="418" parent="236" name="up_time">
       <Position>10</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="386" parent="235" name="audit_user">
+    <column id="419" parent="236" name="audit_user">
       <Position>11</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="387" parent="235" name="audit_time">
+    <column id="420" parent="236" name="audit_time">
       <Position>12</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="388" parent="235" name="PRIMARY">
+    <key id="421" parent="236" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>account_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="389" parent="236" name="id">
+    <column id="422" parent="237" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="236" name="balance_id">
+    <column id="423" parent="237" name="balance_id">
       <Position>2</Position>
       <Comment>结算单编号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="391" parent="236" name="total_money">
+    <column id="424" parent="237" name="total_money">
       <Position>3</Position>
       <Comment>结算金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="392" parent="236" name="time">
+    <column id="425" parent="237" name="time">
       <Position>4</Position>
       <Comment>结算时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="236" name="balance_type">
+    <column id="426" parent="237" name="balance_type">
       <Position>5</Position>
       <Comment>结算类型 房租结算，维修费结算，押金退还结算等</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="394" parent="236" name="payment_bank">
+    <column id="427" parent="237" name="payment_bank">
       <Position>6</Position>
       <Comment>付款银行</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="395" parent="236" name="payment_acount">
+    <column id="428" parent="237" name="payment_acount">
       <Position>7</Position>
       <Comment>付款账号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="396" parent="236" name="payment_money">
+    <column id="429" parent="237" name="payment_money">
       <Position>8</Position>
       <Comment>付款金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="397" parent="236" name="payment_time">
+    <column id="430" parent="237" name="payment_time">
       <Position>9</Position>
       <Comment>付款时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="398" parent="236" name="payment_user">
+    <column id="431" parent="237" name="payment_user">
       <Position>10</Position>
       <Comment>付款人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="399" parent="236" name="collection_bank">
+    <column id="432" parent="237" name="collection_bank">
       <Position>11</Position>
       <Comment>收款方</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="400" parent="236" name="collection_account">
+    <column id="433" parent="237" name="collection_account">
       <Position>12</Position>
       <Comment>收款账号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="401" parent="236" name="collection_money">
+    <column id="434" parent="237" name="collection_money">
       <Position>13</Position>
       <Comment>收款金额</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="402" parent="236" name="user_id">
+    <column id="435" parent="237" name="user_id">
       <Position>14</Position>
       <Comment>收款人/用户</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="403" parent="236" name="landlord_id">
+    <column id="436" parent="237" name="landlord_id">
       <Position>15</Position>
       <Comment>收款人/房东</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="236" name="cr_user">
+    <column id="437" parent="237" name="cr_user">
       <Position>16</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="405" parent="236" name="cr_time">
+    <column id="438" parent="237" name="cr_time">
       <Position>17</Position>
       <Comment>创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="406" parent="236" name="up_user">
+    <column id="439" parent="237" name="up_user">
       <Position>18</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="407" parent="236" name="up_time">
+    <column id="440" parent="237" name="up_time">
       <Position>19</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="408" parent="236" name="audit_user">
+    <column id="441" parent="237" name="audit_user">
       <Position>20</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="409" parent="236" name="audit_time">
+    <column id="442" parent="237" name="audit_time">
       <Position>21</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="410" parent="236" name="balance_state">
+    <column id="443" parent="237" name="balance_state">
       <Position>22</Position>
       <Comment>结算单状态</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="411" parent="236" name="IDU_rd_finence_balance_id8270">
+    <index id="444" parent="237" name="IDU_rd_finence_balance_id8270">
       <ColNames>balance_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="412" parent="236" name="PRIMARY">
+    <key id="445" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="413" parent="236" name="IDU_rd_finence_balance_id8270">
+    <key id="446" parent="237" name="IDU_rd_finence_balance_id8270">
       <ColNames>balance_id</ColNames>
       <UnderlyingIndexName>IDU_rd_finence_balance_id8270</UnderlyingIndexName>
     </key>
-    <column id="414" parent="237" name="id">
+    <column id="447" parent="238" name="id">
       <Position>1</Position>
       <Comment>编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -2001,102 +2200,102 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="415" parent="237" name="floor_id">
+    <column id="448" parent="238" name="floor_id">
       <Position>2</Position>
       <Comment>拍租房屋id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="416" parent="237" name="floor_price">
+    <column id="449" parent="238" name="floor_price">
       <Position>3</Position>
       <Comment>拍租底价</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="417" parent="237" name="price_type">
+    <column id="450" parent="238" name="price_type">
       <Position>4</Position>
       <Comment>拍租类型 固定价格、自定义价格</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="418" parent="237" name="current_price">
+    <column id="451" parent="238" name="current_price">
       <Position>5</Position>
       <Comment>当前拍租价格</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="419" parent="237" name="current_user_id">
+    <column id="452" parent="238" name="current_user_id">
       <Position>6</Position>
       <Comment>当前拍租用户id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="420" parent="237" name="current_time">
+    <column id="453" parent="238" name="current_time">
       <Position>7</Position>
       <Comment>当前拍租时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="421" parent="237" name="auction_number">
+    <column id="454" parent="238" name="auction_number">
       <Position>8</Position>
       <Comment>目前拍租次数</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="422" parent="237" name="landlord_id">
+    <column id="455" parent="238" name="landlord_id">
       <Position>9</Position>
       <Comment>拍租房东id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="423" parent="237" name="auction_state">
+    <column id="456" parent="238" name="auction_state">
       <Position>10</Position>
       <Comment>拍租状态 等待开始、进行中、已完成</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="424" parent="237" name="cr_user">
+    <column id="457" parent="238" name="cr_user">
       <Position>11</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="425" parent="237" name="cr_time">
+    <column id="458" parent="238" name="cr_time">
       <Position>12</Position>
       <Comment>创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="426" parent="237" name="up_user">
+    <column id="459" parent="238" name="up_user">
       <Position>13</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="427" parent="237" name="up_time">
+    <column id="460" parent="238" name="up_time">
       <Position>14</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="428" parent="237" name="audit_user">
+    <column id="461" parent="238" name="audit_user">
       <Position>15</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="429" parent="237" name="audit_time">
+    <column id="462" parent="238" name="audit_time">
       <Position>16</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="430" parent="237" name="PRIMARY">
+    <key id="463" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="431" parent="238" name="id">
+    <column id="464" parent="239" name="id">
       <Position>1</Position>
       <Comment>编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -2104,272 +2303,272 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="432" parent="238" name="order_id">
+    <column id="465" parent="239" name="order_id">
       <Position>2</Position>
       <Comment>订单编号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="433" parent="238" name="order_type">
+    <column id="466" parent="239" name="order_type">
       <Position>3</Position>
       <Comment>订单类型 保证金、租金、水电费、拍房金、押金、维修费</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="434" parent="238" name="from_id">
+    <column id="467" parent="239" name="from_id">
       <Position>4</Position>
       <Comment>订单关联来源id 所属房屋编号、所属维修单编号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="435" parent="238" name="order_amount">
+    <column id="468" parent="239" name="order_amount">
       <Position>5</Position>
       <Comment>订单金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="436" parent="238" name="discount_amount">
+    <column id="469" parent="239" name="discount_amount">
       <Position>6</Position>
       <Comment>订单优惠金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="437" parent="238" name="pay_amount">
+    <column id="470" parent="239" name="pay_amount">
       <Position>7</Position>
       <Comment>订单实际支付金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="438" parent="238" name="coupon_id">
+    <column id="471" parent="239" name="coupon_id">
       <Position>8</Position>
       <Comment>订单优惠券id</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="439" parent="238" name="pay_state">
+    <column id="472" parent="239" name="pay_state">
       <Position>9</Position>
       <Comment>订单支付状态 等待支付、支付成功、支付失败</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="440" parent="238" name="order_note">
+    <column id="473" parent="239" name="order_note">
       <Position>10</Position>
       <Comment>订单备注</Comment>
       <DataType>varchar(500)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="441" parent="238" name="user_id">
+    <column id="474" parent="239" name="user_id">
       <Position>11</Position>
       <Comment>订单联系人id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="442" parent="238" name="landlord_id">
+    <column id="475" parent="239" name="landlord_id">
       <Position>12</Position>
       <Comment>房东id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="443" parent="238" name="building_id">
+    <column id="476" parent="239" name="building_id">
       <Position>13</Position>
       <Comment>楼房id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="444" parent="238" name="house_id">
+    <column id="477" parent="239" name="house_id">
       <Position>14</Position>
       <Comment>房屋id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="445" parent="238" name="cr_user">
+    <column id="478" parent="239" name="cr_user">
       <Position>15</Position>
       <Comment>订单支付时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="446" parent="238" name="cr_time">
+    <column id="479" parent="239" name="cr_time">
       <Position>16</Position>
       <Comment>订单创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="447" parent="238" name="up_user">
+    <column id="480" parent="239" name="up_user">
       <Position>17</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="448" parent="238" name="up_time">
+    <column id="481" parent="239" name="up_time">
       <Position>18</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="449" parent="238" name="audit_user">
+    <column id="482" parent="239" name="audit_user">
       <Position>19</Position>
       <Comment>审核人 为0系统审核</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="450" parent="238" name="audit_time">
+    <column id="483" parent="239" name="audit_time">
       <Position>20</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="451" parent="238" name="IDU_rd_prodder_order_idF1F8">
+    <index id="484" parent="239" name="IDU_rd_prodder_order_idF1F8">
       <ColNames>order_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="452" parent="238" name="PRIMARY">
+    <key id="485" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="453" parent="238" name="IDU_rd_prodder_order_idF1F8">
+    <key id="486" parent="239" name="IDU_rd_prodder_order_idF1F8">
       <ColNames>order_id</ColNames>
       <UnderlyingIndexName>IDU_rd_prodder_order_idF1F8</UnderlyingIndexName>
     </key>
-    <column id="454" parent="239" name="id">
+    <column id="487" parent="240" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="455" parent="239" name="trade_id">
+    <column id="488" parent="240" name="trade_id">
       <Position>2</Position>
       <Comment>交易单号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="456" parent="239" name="order_id">
+    <column id="489" parent="240" name="order_id">
       <Position>3</Position>
       <Comment>订单号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="457" parent="239" name="third_pay_id">
+    <column id="490" parent="240" name="third_pay_id">
       <Position>4</Position>
       <Comment>第三方订单号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="458" parent="239" name="third_pay_type">
+    <column id="491" parent="240" name="third_pay_type">
       <Position>5</Position>
       <Comment>支付渠道id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="459" parent="239" name="third_pay_name">
+    <column id="492" parent="240" name="third_pay_name">
       <Position>6</Position>
       <Comment>支付渠道名称</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="460" parent="239" name="trade_state">
+    <column id="493" parent="240" name="trade_state">
       <Position>7</Position>
       <Comment>交易状态</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="461" parent="239" name="trade_amount">
+    <column id="494" parent="240" name="trade_amount">
       <Position>8</Position>
       <Comment>交易金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="462" parent="239" name="discount_amount">
+    <column id="495" parent="240" name="discount_amount">
       <Position>9</Position>
       <Comment>优惠金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="463" parent="239" name="pay_amount">
+    <column id="496" parent="240" name="pay_amount">
       <Position>10</Position>
       <Comment>实付金额</Comment>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="464" parent="239" name="pay_time">
+    <column id="497" parent="240" name="pay_time">
       <Position>11</Position>
       <Comment>支付时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="465" parent="239" name="notify_time">
+    <column id="498" parent="240" name="notify_time">
       <Position>12</Position>
       <Comment>通知时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="466" parent="239" name="pay_account">
+    <column id="499" parent="240" name="pay_account">
       <Position>13</Position>
       <Comment>支付账号</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="467" parent="239" name="user_id">
+    <column id="500" parent="240" name="user_id">
       <Position>14</Position>
       <Comment>支付对象</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="468" parent="239" name="attach">
+    <column id="501" parent="240" name="attach">
       <Position>15</Position>
       <Comment>备注</Comment>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="469" parent="239" name="cr_user">
+    <column id="502" parent="240" name="cr_user">
       <Position>16</Position>
       <Comment>创建人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="470" parent="239" name="cr_time">
+    <column id="503" parent="240" name="cr_time">
       <Position>17</Position>
       <Comment>创建时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="471" parent="239" name="up_user">
+    <column id="504" parent="240" name="up_user">
       <Position>18</Position>
       <Comment>修改人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="472" parent="239" name="up_time">
+    <column id="505" parent="240" name="up_time">
       <Position>19</Position>
       <Comment>修改时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="473" parent="239" name="audit_user">
+    <column id="506" parent="240" name="audit_user">
       <Position>20</Position>
       <Comment>审核人</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="474" parent="239" name="audit_time">
+    <column id="507" parent="240" name="audit_time">
       <Position>21</Position>
       <Comment>审核时间</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="475" parent="239" name="IDU_rd_prodion_trade_id18F9">
+    <index id="508" parent="240" name="IDU_rd_prodion_trade_id18F9">
       <ColNames>trade_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="476" parent="239" name="PRIMARY">
+    <key id="509" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="477" parent="239" name="IDU_rd_prodion_trade_id18F9">
+    <key id="510" parent="240" name="IDU_rd_prodion_trade_id18F9">
       <ColNames>trade_id</ColNames>
       <UnderlyingIndexName>IDU_rd_prodion_trade_id18F9</UnderlyingIndexName>
     </key>
