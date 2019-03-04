@@ -40,28 +40,28 @@ public class CoreUserServiceImpl implements CoreUserService {
     @Override
     public boolean saveOrUpdateBatch(Collection<CoreUser> collection, int i) {
         for (var user : collection) {
-            var queryWrapper = new QueryWrapper<CoreUser>().eq("wx_id", user.getWx_id());
+            var queryWrapper = new QueryWrapper<CoreUser>().eq("wx_id", user.getWxId());
             var userResultList = coreUserDao.selectList(queryWrapper);
 
             if (userResultList.size() == 0) {
-                user.setCr_time((int)DateUtil.currentSeconds());
-                user.setCr_user(0);
+                user.setCrTime((int)DateUtil.currentSeconds());
+                user.setCrUser(0);
                 coreUserDao.insert(user);
             } else {
                 var userResult = userResultList.get(0);
                 var update = false;
-                if (!user.getWx_name().isEmpty() && !user.getWx_name().equals(userResult.getWx_name())) {
-                    userResult.setWx_name(user.getWx_name());
+                if (!user.getWxName().isEmpty() && !user.getWxName().equals(userResult.getWxName())) {
+                    userResult.setWxName(user.getWxName());
                     update = true;
                 }
-                if (!user.getWx_head_url().isEmpty() && !user.getWx_head_url().equals(userResult.getWx_head_url())) {
-                    userResult.setWx_head_url(user.getWx_head_url());
+                if (!user.getWxHeadUrl().isEmpty() && !user.getWxHeadUrl().equals(userResult.getWxHeadUrl())) {
+                    userResult.setWxHeadUrl(user.getWxHeadUrl());
                     update = true;
                 }
 
                 if (update) {
-                    userResult.setUp_time((int)DateUtil.currentSeconds());
-                    userResult.setUp_user(0);
+                    userResult.setUpTime((int)DateUtil.currentSeconds());
+                    userResult.setUpUser(0);
                 }
                 coreUserDao.updateById(userResult);
             }

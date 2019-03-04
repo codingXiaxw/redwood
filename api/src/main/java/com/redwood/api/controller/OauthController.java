@@ -64,9 +64,9 @@ public class OauthController extends BaseController {
         if (null != result && result.length() > 0) {
             JSONObject userInfoJSON = new JSONObject(result);
             var coreUser = new CoreUser();
-            coreUser.setWx_id(openid);
-            coreUser.setWx_name(userInfoJSON.get("nickName").toString());
-            coreUser.setWx_head_url(userInfoJSON.get("avatarUrl").toString());
+            coreUser.setWxId(openid);
+            coreUser.setWxName(userInfoJSON.get("nickName").toString());
+            coreUser.setWxHeadUrl(userInfoJSON.get("avatarUrl").toString());
             var map = new HashMap<>();
 
             //Map userInfo = new HashMap();

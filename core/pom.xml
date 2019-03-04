@@ -7,6 +7,9 @@
     <groupId>com.redwood</groupId>
     <artifactId>core</artifactId>
     <version>1.0.0-beta</version>
+
+    <packaging>jar</packaging>
+
     <build>
         <plugins>
             <plugin>
@@ -73,7 +76,4 @@
             <version>4.4.1</version>
         </dependency>
     </dependencies>
-    <packaging>jar</packaging>
-
-
 </project>
